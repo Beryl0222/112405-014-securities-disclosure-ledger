@@ -1,27 +1,116 @@
 {
+  "case_id": "case-securities-disclosure-ledger",
   "records": [
     {
-      "id": "FD-1",
-      "text": "按固定汇率计算，海外订单金额较去年同期增长 20%；本期已确认收入尚未拆分地区。",
-      "kind": "quarterly-note"
+      "id": "FD-B1",
+      "kind": "report",
+      "text": "本财年首季海外订单按固定汇率增长两成，报告汇率见表一；确认收入未拆地区。"
     },
     {
-      "id": "FD-2",
-      "text": "问：海外收入增长多少？答：约两成，主要来自订单改善。",
-      "kind": "transcript"
+      "id": "FD-T1",
+      "kind": "table",
+      "text": "表一单位百万元；列：本财年首季、上财年首季。行：海外订单固定汇率120、100；海外订单报告汇率114、100；集团确认收入300、250。脚注：首季七月至九月。"
     },
     {
-      "id": "FD-3",
-      "text": "更正：FD-1 的比较基期为上一财年同期，原稿误写自然季度。",
-      "kind": "correction"
-    }
-  ],
-  "outbound": [
+      "id": "FD-T2",
+      "kind": "table",
+      "text": "表二单位万元；列：本季、上一季。预收款800、1000；比较相邻季度，不是去年同期。"
+    },
     {
-      "id": "OUT-4",
-      "text": "海外收入同比增长约 20%。",
-      "source_record": "FD-2"
+      "id": "FD-Q1",
+      "kind": "question",
+      "text": "分析师：海外收入也增长两成吗？"
+    },
+    {
+      "id": "FD-A1",
+      "kind": "answer",
+      "text": "财务负责人：这里两成说前面订单表，不是收入。集团收入请用表一最后一行。"
+    },
+    {
+      "id": "FD-Q2",
+      "kind": "question",
+      "text": "分析师：明年收入能到四亿吗？"
+    },
+    {
+      "id": "FD-A2",
+      "kind": "answer",
+      "text": "负责人：若产能按期交付，希望达到该目标，目前不能当已实现数字。"
+    },
+    {
+      "id": "FD-C1",
+      "kind": "correction",
+      "text": "表一上财年首季集团确认收入应为240百万元，原250有误；其余行数值及期间不变。"
+    },
+    {
+      "id": "FD-C2",
+      "kind": "clarification",
+      "text": "表二800和1000都是万元，问答稿误写百万元不适用于该表。"
+    },
+    {
+      "id": "FD-M1",
+      "kind": "media",
+      "text": "媒体甲称集团收入增长20%，媒体乙原文转载甲稿。"
+    },
+    {
+      "id": "FD-N1",
+      "kind": "report",
+      "text": "下一财年首季集团收入360百万元，未提供可比上年数。"
     }
   ],
-  "case_id": "disclosure-1"
+  "objects": {
+    "periods": [
+      {
+        "id": "FY27Q1",
+        "from": "2026-07-01",
+        "to": "2026-09-30"
+      },
+      {
+        "id": "FY26Q1",
+        "from": "2025-07-01",
+        "to": "2025-09-30"
+      }
+    ],
+    "tables": [
+      {
+        "id": "T1",
+        "source": "FD-T1"
+      },
+      {
+        "id": "T2",
+        "source": "FD-T2"
+      }
+    ]
+  },
+  "existing": [
+    {
+      "id": "OUT1",
+      "recipient": "分析师甲",
+      "state": "sent",
+      "text": "集团收入增20%，海外固定汇率订单增20%。",
+      "sources": [
+        "FD-T1",
+        "FD-A1"
+      ],
+      "formula_text": "收入用300与250计算"
+    },
+    {
+      "id": "OUT2",
+      "recipient": "分析师乙",
+      "state": "draft",
+      "text": "预收款环比下降，海外报告汇率订单增14%。",
+      "sources": [
+        "FD-T1",
+        "FD-T2"
+      ]
+    },
+    {
+      "id": "OUT3",
+      "recipient": "分析师丙",
+      "state": "sent",
+      "text": "明年收入已达四亿元。",
+      "sources": [
+        "FD-A2"
+      ]
+    }
+  ]
 }
