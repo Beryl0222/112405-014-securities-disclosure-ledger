@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "id": "FD-1",
+      "text": "按固定汇率计算，海外订单金额较去年同期增长 20%；本期已确认收入尚未拆分地区。",
+      "kind": "quarterly-note"
+    },
+    {
+      "id": "FD-2",
+      "text": "问：海外收入增长多少？答：约两成，主要来自订单改善。",
+      "kind": "transcript"
+    },
+    {
+      "id": "FD-3",
+      "text": "更正：FD-1 的比较基期为上一财年同期，原稿误写自然季度。",
+      "kind": "correction"
+    }
+  ],
+  "outbound": [
+    {
+      "id": "OUT-4",
+      "text": "海外收入同比增长约 20%。",
+      "source_record": "FD-2"
+    }
+  ],
+  "case_id": "disclosure-1"
+}
